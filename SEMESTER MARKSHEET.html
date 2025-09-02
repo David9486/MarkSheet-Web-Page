@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marksheet Header</title>
+  <style>
+    body{
+      font-family: "Times New Roman", serif;
+      margin: 10px;
+    }
+    .marksheet{
+      border: 2px solid #000;   
+      padding: 5px;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .logo-left{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000; 
+      text-align: center;
+      line-height: 100px;
+      font-size: 12px;
+      color: #555;
+    }
+    
+
+    .logo-right{
+
+       width: 100px;
+      height: 100px;
+      margin-left: -10%;
+      margin-top: 10%;
+      border: 1px solid #000; 
+      color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-text{
+      text-align: center;
+      flex: 1;
+      margin: 0 20px;
+    }
+    .header-text h2{
+      margin: 0;
+      color: #800000;
+      font-weight: bold;
+    }
+    .header-text p{
+      margin: 2px 0;
+      font-size: 13px;
+    }
+    .sub-header{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .exam-title{
+      text-align: center;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+   .candidate-info{
+  width: 100%;
+  border-collapse: collapse;
+  border: 0px solid #000; 
+  font-size: 14px;
+  margin-top: 1px;
+}
+.candidate-info td{
+  border: 1px solid #000;
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+.candidate-info .label{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.candidate-info .value{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.candidate-info .photo{
+  width: 500px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #555;
+}
+.course-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.course-table th, .course-table td{
+  border: 1px solid #000;
+  padding: 6px 8px;
+  text-align: center;
+}
+.course-table th{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.course-table td:nth-child(3){
+  text-align: left; 
+}
+body{ 
+  font-family: "Times New Roman", serif; 
+  margin: 12px; 
+}
+
+.summary-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;       
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.summary-table col:first-child{ width: 20%; }   
+.summary-table col:nth-child(n+2){ width: 8%; } 
+.summary-table th,
+.summary-table td{
+  border: 1px solid #000; 
+  padding: 8px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.summary-table thead th{
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #fff;
+  height: 36px;
+}
+
+
+.summary-table td:first-child{
+  text-align: left;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+
+.summary-table .cgpa-label{
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.summary-table .medium{
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+
+.summary-table td, .summary-table th{ 
+  background: #fff; 
+}
+
+.footer-section{
+  width: 98%;
+  border: 2px solid #000;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-note{
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.footer-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 25px 0;
+}
+.seal-box{
+  width: 120px;
+  height: 120px;
+  color: #555;
+  
+}
+
+.signature-box{
+  width: 180px;
+  height: 60px;
+  color: #555;
+  margin-right:65%;
+
+}
+
+.signature-labels{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+  <div class="marksheet">
+    <div class="header">
+      <div class="logo-left">
+        <img src="images/Untitled-design2.jpeg" alt="college logo" />
+      </div>
+      <div class="header-text">
+        <h2>SETHU INSTITUTE OF TECHNOLOGY</h2>
+        <p>(An Autonomous Institution Affiliated to Anna University, Chennai)</p>
+        <p>Pulloor-626 115, Kariapatti Taluk, Virudhunagar District, Tamil Nadu, India.</p>
+      </div>
+      <header class="header-container">
+      <div class="logo-right">
+        <img src="images/right-logo.png" alt="right logo"/>
+      </div>
+    </header>
+    </div>
+    <div class="exam-title">
+      <p>B.E. DEGREE EXAMINATION</p>
+      <p>GRADE SHEET</p>
+    </div>
+
+    <div class="sub-header">
+      <span>Barcode / Seal</span>
+      <span>Sl No : A 101754</span>
+      <span>Folio No : 1SU21000062</span>
+    </div>
+
+<table class="candidate-info">
+  <colgroup>
+    <col style="width:15%">
+    <col style="width:10%">
+    <col style="width:12%">
+    <col style="width:8%">
+    <col style="width:18%">
+    <col style="width:10%">
+    <col style="width:15%">
+    <col style="width:12%">
+    <col style="width:20%"> 
+  </colgroup>
+
+ 
+  <tr>
+    <td class="label">NAME OF THE CANDIDATE</td>
+    <td class="value" colspan="3">DAVID RAJA S</td>
+    <td class="label">REGISTER No.</td>
+    <td class="value" colspan="3">921721115011</td>
+    <td class="photo" rowspan="3">
+      <img src="images/IMG_20250828_204148.jpg" alt="Candidate Photo" style="width:100px; height:120px;"/>
+    </td>
+  </tr>
+
+ 
+  <tr>
+    <td class="label">DATE OF BIRTH</td>
+    <td class="value">06-09-2003</td>
+    <td class="label">GENDER</td>
+    <td class="value">MALE</td>
+    <td class="label">MONTH &amp; YEAR OF EXAMINATION</td>
+    <td class="value">MAY 2022</td>
+    <td class="label">DATE OF PUBLICATION</td>
+    <td class="value">14-10-2022</td>
+  </tr>
+
+ 
+  <tr>
+    <td class="label">PROGRAMME &amp; BRANCH</td>
+    <td class="value" colspan="5">B.E., COMPUTER SCIENCE AND DESIGN</td>
+    <td class="label">REGULATIONS</td>
+    <td class="value">2021</td>
+  </tr>
+</table>
+
+<table class="course-table">
+  <colgroup>
+    <col style="width:8%">   
+    <col style="width:15%">  
+    <col style="width:42%">  
+    <col style="width:8%">   
+    <col style="width:10%">  
+    <col style="width:9%">   
+    <col style="width:8%">   
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>SEM No.</th>
+      <th>COURSE CODE</th>
+      <th>COURSE TITLE</th>
+      <th>CREDITS</th>
+      <th>LETTER GRADE</th>
+      <th>GRADE POINT</th>
+      <th>RESULT</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>21UEN201</td>
+      <td>COMMUNICATION SKILLS FOR PROFESSIONALS (INTEGRATED COURSE)</td>
+      <td>1.5</td>
+      <td>A</td>
+      <td>8</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UCD205</td>
+      <td>DIGITAL AND COMPUTER ORGANIZATION</td>
+      <td>3.0</td>
+      <td>B+</td>
+      <td>7</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UCS204</td>
+      <td>PROGRAMMING USING C</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>8</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UGM231</td>
+      <td>ENVIRONMENTAL SCIENCE</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>PASS *</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UMA210</td>
+      <td>DIFFERENTIAL EQUATIONS, FOURIER SERIES AND TRANSFORMS</td>
+      <td>4.0</td>
+      <td>A</td>
+      <td>8</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UPH205</td>
+      <td>PHYSICS FOR INFORMATION SCIENCE</td>
+      <td>3.0</td>
+      <td>B+</td>
+      <td>7</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UCS211</td>
+      <td>C PROGRAMMING LABORATORY</td>
+      <td>1.5</td>
+      <td>A+</td>
+      <td>9</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>21UGS210</td>
+      <td>BASIC SCIENCES LABORATORY - II</td>
+      <td>1.0</td>
+      <td>A+</td>
+      <td>9</td>
+      <td>PASS</td>
+    </tr>
+
+    <tr>
+            <td></td>
+      <td></td>
+      <td style="text-align:center; font-weight:bold; padding:10px;">
+        ***END OF STATEMENT***
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+        <tr>
+            <td></td>
+      <td></td>
+      <td style="text-align:center; font-weight:bold; padding:10px;height: 800px;"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<table class="summary-table" aria-label="Summary / GPA Table">
+    <colgroup>
+      <col>
+      <col>
+      <col> 
+      <col>
+      <col> 
+      <col> 
+      <col> 
+      <col>
+      <col>
+      <col> 
+      <col> 
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Semester</th>
+        <th>I</th>
+        <th>II</th>
+        <th>III</th>
+        <th>IV</th>
+        <th>V</th>
+        <th>VI</th>
+        <th>VII</th>
+        <th>VIII</th>
+        <th>IX</th>
+        <th>X</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Credits Registered</td>
+        <td></td>
+        <td>17.0</td>     
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Credits Earned</td>
+        <td></td>
+        <td>17.0</td>     
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Grade Points Earned</td>
+        <td></td>
+        <td>56.00</td>    
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Grade Point Average (GPA)</td>
+        <td></td>
+        <td>7.794</td>    
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Cumulative Credits Earned</td>
+        <td></td>                 
+        <td>37.0</td>             
+        <td class="cgpa-label" colspan="4">Cumulative Grade Point Average (CGPA)</td> 
+        <td>7.770</td>            
+        <td class="medium" colspan="3">Medium of Instruction : English</td> 
+      </tr>
+    </tbody>
+  </table>
+  
+<div class="footer-section">
+  
+ 
+  <div class="footer-top">
+    <span>U - Reappearance Registration</span>
+    <span>W - Withdrawal</span>
+    <span>AB - Absent</span>
+    <span>SA - Shortage of Attendance</span>
+  </div>
+
+  <div class="footer-note">
+    * Non Credit Course
+  </div>
+
+
+  <div class="footer-row">
+    <div class="seal-box">
+      <img src="images/Screenshot_31-8-2025_223248_.jpeg" alt="College Seal"/>
+    </div>
+    <div class="signature-box"></div>
+    <div class="signature-box">
+      <img src="images/Screenshot_31-8-2025_223342_.jpeg" alt="Controller Signature"/>
+    </div>
+  </div>
+
+
+  <div class="signature-labels">
+    <span style="margin-left:140px;">Signature of the Candidate</span>
+    <span style="margin-right:40px;">Controller of Examinations
+    </span>
+  </div>
+
+
+  <div class="footer-bottom">
+    <span>Pulloor : 626 115</span>
+    <span>Date : 04-11-2022</span>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
